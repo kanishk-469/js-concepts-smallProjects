@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM-Projects</title>
+  <style>
+    p{
+      font-size: 20px;
+    }
+    button{
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <p>YouTube Subscribe Button</p>
+  <button onclick="subscribe();" class="js-subscribe-button">Subscribe</button>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <p>Amazon Shipping Calculator</p>
+  <p>Orders under $40 = +$10 shipping.</p>
+  <p>Orders over $40 = FREE shipping.</p>
+
+  <input type="number" class="js-cost" style="padding:3px;border-top-style: solid;" placeholder="cost of order" onkeydown="
+  // console.log(event);
+  if(event.key === 'Enter'){
+    const result = calculateAmount();
+  document.querySelector('.js-result').innerHTML = `$${result}`;
+  }"/>
+
+  <button onclick="
+  const result = calculateAmount();
+  document.querySelector('.js-result').innerHTML = `$${result}`;
+  console.log(result);
+  ">Calculate</button>
+
+  <p class="js-result"></p>
+
+
+
+  <script>
+
+    String(25);
+    console.log('25' - 5); // type coercion with -,* and / : result 20
+    console.log('25' + 5); // '25' + '5' = 255
+
+    // document object represent the WEBPAGE
+    // window is a built-in object that represent the BROWSER, Javascript add its automatically
+    // DOM allows Javascript to fully control the webpage
+    //document.querySelector() to get element from webpage and put inside a JS
+    //onkeydown=" " ,makes element interactive with the keyboard.
+
+    window.document;
+    window.console.log('window');
+    // window.alert();  // this works behind the scene
+
+    function subscribe(){
+      const buttonElement = document.querySelector('.js-subscribe-button');
+    if(buttonElement.innerText === 'Subscribe'){
+      buttonElement.innerHTML = 'Subscribed';
+    }else {
+      buttonElement.innerHTML = 'Subscribe';
+    }
+    }
+
+    function calculateAmount(){
+    let cost = +(document.querySelector('.js-cost').value);
+    if(cost <= 40){
+      return cost = cost + 10;
+    }else if(cost > 40){
+      return cost;
+    }
+  }
+
+  </script>
+</body>
+</html>

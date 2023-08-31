@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Function-practice-calculator-app-optimized</title>
+  <style>
+    /* div{
+      display:flex;
+      flex-direction:row;
+      justify-content: start;
+      margin-bottom: 5px;
+    }
+    button{
+      font-size:22px;
+      cursor:pointer;
+      width:60px;
+      height:60px;
+      border-style:solid;
+     border-radius:50%;
+      border-color: gray;
+      margin-right:3px;
+    } */
+  </style>
+</head>
+<body>
+   <!-- <div>
+    <button onclick="
+      // calculation += '1'; // concatination happens
+      // console.log(calculation);
+      updateCalculation('1');
+      ">1</button>
+
+    <button onclick="
+    // calculation += '2';
+    // console.log(calculation);
+    updateCalculation('2');
+    ">2</button>
+
+    <button onclick="
+    // calculation += '3';
+    // console.log(calculation);
+    updateCalculation('3');
+    ">3</button>
+
+    <button onclick="
+    // calculation += '+';
+    // console.log(calculation);
+    updateCalculation('+');
+    ">+</button>
+   
+  </div>
+
+  <div>
+    <button onclick="
+      // calculation += '4'; // concatination happens
+      // console.log(calculation);
+      updateCalculation('4');
+      ">4</button>
+
+    <button onclick="
+    // calculation += '5';
+    // console.log(calculation);
+    updateCalculation('5');
+    ">5</button>
+
+    <button onclick="
+    // calculation += '6';
+    // console.log(calculation);
+    updateCalculation('6');
+    ">6</button>
+
+    <button onclick="
+    // calculation += '-';
+    // console.log(calculation);
+    updateCalculation('-');
+    ">-</button>
+    
+  </div>
+
+  <div>
+    <button onclick="
+      // calculation += '7'; // concatination happens
+      // console.log(calculation);
+      updateCalculation('7');
+      ">7</button>
+
+    <button onclick="
+    // calculation += '8';
+    // console.log(calculation);
+    updateCalculation('8');
+    ">8</button>
+
+    <button onclick="
+    // calculation += '9';
+    // console.log(calculation);
+    updateCalculation('9');
+    ">9</button>
+
+    <button onclick="
+    // calculation += '*';
+    // console.log(calculation);
+    updateCalculation('*');
+    ">*</button>
+  </div>
+
+
+  <div>
+    <button onclick="
+      // calculation += '0'; // concatination happens 
+      // console.log(calculation);
+      updateCalculation('0');
+      ">0</button>
+    <button onclick="
+    // calculation += '.';
+    //   console.log(calculation);
+    updateCalculation('.');
+    ">.</button>
+
+    <button onclick="
+    // calculation += '/';
+    // console.log(calculation);
+    updateCalculation('/');
+    ">/</button>
+    <button onclick="
+    calculation = eval(calculation);  //converts the calculation string into actual math
+    console.log(calculation);
+    ">=</button>
+     <button onclick="
+     calculation = '';  //clear the variable value
+     console.log(calculation);
+     ">Clear</button>
+  </div> -->
+
+
+  <p>Cart Quantity</p>
+
+  <button onclick="
+  c(`Cart Quantity: ${cartQuantity}`);
+  ">Show Quantity</button>
+
+  <button onclick="
+    updateCartQuantity(1);
+     ">Add to cart</button>
+
+  <button onclick="
+    updateCartQuantity(2);
+     ">+2</button>
+
+  <button onclick="
+    updateCartQuantity(3);
+     ">+3</button>
+
+  <button onclick="
+    updateCartQuantity(4);
+    ">+4</button>
+
+  <button onclick="
+    updateCartQuantity(5);
+    ">+5</button>
+
+  <button onclick="
+    c(`Cart was reset.\nCart Quantity: ${cartQuantity = 0}`);
+    ">Reset Cart</button>
+
+
+ <button onclick="
+    updateCartQuantity(-1);
+    ">Remove from cart</button>
+
+  <button onclick="
+    updateCartQuantity(-2);
+    ">-2</button>
+
+  <button onclick="
+    updateCartQuantity(-3);
+    ">-3</button>
+
+
+  <script>
+  const c = console.log.bind();
+  let cartQuantity = 0;
+  function updateCartQuantity(change){
+    if(cartQuantity + change > 10){
+      alert('The cart is full');
+      return;
+    }else if(cartQuantity + change < 0){
+      alert('Not enough items in the cart');
+      return;
+    }else{
+      cartQuantity += change;
+      c(`Cart Quantity: ${cartQuantity}`);
+    }
+  }
+  </script>
+
+    <script>
+      // let calculation ='';
+      // function updateCalculation(value){
+      //   calculation += value;
+      //   console.log(calculation);
+      // }
+    </script>
+
+<script>
+  /*
+  function greet (name){
+    if(name === undefined){
+    console.log(`Hi There!`);
+    }else{
+    console.log(`HELLO ${name}`);
+    }
+  }
+  const greeet = (name) =>{
+    console.log(`HELLU ${name}`);
+
+  }
+  greet('Kanishka');      // call/run also passing argumnents to function
+  greet('Kunal');
+  greet();
+  greeet('Simon');
+  greeet('Aparna');
+  
+
+  function convertToFarenheit(celsius){
+    return (celsius * 9/5) + 32;
+   }
+   console.log(`${convertToFarenheit(25)}F`);
+
+  function convertToCelsius(farenheit){
+    return (farenheit - 32) * 5/9;
+  }
+  console.log(`${convertToCelsius(86)}C`);
+
+  function convertTemperature(degree, unit){
+    if(unit === 'C'){
+       const  result = convertToFarenheit(degree);
+       return `${result}F`;
+    } else if(unit === 'F'){
+       const result = convertToCelsius(degree);
+      return `${result}C`;
+    }
+  }
+  console.log(convertTemperature(25,'C'));
+  console.log(convertTemperature(86,'F'));
+  */
+</script>
+</body>
+</html>

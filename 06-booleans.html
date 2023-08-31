@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boolean N if-statements</title>
+</head>
+<body>
+  
+
+
+  <script>
+    true  // boolean value
+    false  // boolean value
+
+    console.log(3 > 5 - 5);   // true , check operator precedence
+
+    console.log( 5 === '5.00'); // false, check type and value both
+
+
+    if(true){
+      console.log('Hello Boolean Value');
+    }
+    
+    if(3 == '3'){
+      console.log('TRUE');
+
+    }else{
+      console.log('FALSE');
+    }
+
+
+    const age = 15;
+    if(age >= 16){
+      console.log('You can drive !');
+      console.log('congrats');
+
+    }else if(age >= 14){
+      console.log('Almost there ;-)!!');
+
+    }else{
+      console.log('You can not drive !');
+
+
+    }
+
+    console.log( true && true);
+    console.log( true && false);
+    console.log( true || false);
+    console.log( true || true);
+
+    console.log(0.2 >= 0 && 0.2 < 1/3);
+
+
+    /* Truthy and Falsy Values 
+    falsy value : - false, '' , 0 , null , undefined , NaN 
+    truthy value : - rest all are truthy values. */
+    if(2){
+      console.log('This is Truthy value');
+    }
+
+    if(0){
+      console.log('This is Truthy value');
+    }else{
+      console.log('This is Falsy Value');
+    }
+
+    let variabl1 ;
+    console.log(variabl1);
+
+    let variabl2 = undefined;
+    console.log(variabl2);
+
+    console.log( 'text' /5);
+
+    let cartQuantity = 6;
+
+    if(cartQuantity){
+      console.log('Product is present in cart');
+    }
+    /* Below all codes are short-cut of if-statement */
+    const result = true ? 'truthy' : 'falsy'; /* first is condition , benefit over if else here we can store result in variable directly */
+    console.log(result);
+
+    const result2 = 0 ? 'truthy' : 'falsy'; /* first is condition , benefit over if else here we can store result in variable directly */
+    console.log(result2);
+
+    cartQuantity ? console.log('Item Present') : console.log('Item not Present'); /* ternary operator which is similar to if else statement in JS */
+
+    false && console.log('hello'); /* Guard Operator , short-circuit evaluation */
+    const message = false && 'hello';
+    console.log(message);
+    const message2 = 4 && 'hello';
+    console.log(message2);
+
+    const currency = 'IND' || 'USD'; /* Default Operator, short-circuit evaluation*/
+    console.log(currency);
+
+    const currency2 = undefined || 'USD'; /* Default Operator, short-circuit evaluation*/
+    console.log(currency2);
+  </script>
+</body>
+</html>

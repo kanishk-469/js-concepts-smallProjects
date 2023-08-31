@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Cart quantity Practice</title>
+  </head>
+  <body>
+     <p>Cart Quantity</p>
+     <button onclick="
+     c(`Cart Quantity: ${cartQuantity}`);
+     ">Show Quantity</button>
+     <button onclick="addToCart()">Add to cart</button>
+     <button onclick="increaseByTwo()">+2</button>
+     <button onclick="increaseByThree()">+3</button>
+     <button onclick="
+        if(cartQuantity < 10){
+          cartQuantity += 4;
+     c(`Cart Quantity: ${cartQuantity}`)
+        }else{
+          alert('The cart is full');
+        }
+     ">+4</button>
+
+     <!-- <button onclick="
+     if (cartQuantity + 4 > 10) {
+       alert('The cart is full');
+     } else {
+       cartQuantity += 4;
+       console.log(`Cart quantity: ${cartQuantity}`);
+     }
+   ">+4</button> -->
+
+
+     <button onclick="
+        if(cartQuantity < 10){
+     c(`Cart Quantity: ${cartQuantity += 5}`)
+        }else{
+          alert('The cart is full');
+        }
+     ">+5</button>
+     <button onclick="reset()">Reset Cart</button>
+
+
+    <button onclick="
+      if (cartQuantity - 1 < 0) {
+        alert('Not enough items in the cart');
+      } else {
+        cartQuantity--;
+        console.log(`Item is removed.\nCart quantity: ${cartQuantity}`);
+      }
+    ">Remove from cart</button>
+
+     <button onclick="
+     if(cartQuantity - 2 >= 0){
+     c(`Cart Quantity: ${cartQuantity -= 2}`);
+     }else{
+      alert('Not enough items in the cart');
+     }
+     ">-2</button>
+     <button onclick="
+     if(cartQuantity - 3 >= 0){
+     c(`Cart Quantity: ${cartQuantity -= 3}`);
+     }else{
+      alert('Not enough items in the cart');
+     }
+     ">-3</button>
+
+
+     <script>
+      const c = console.log.bind();
+      let cartQuantity = 0;
+      // const quantity = ()=>{
+      //   c(`Cart Quantity: ${cartQuantity}`);
+      // };
+
+      const addToCart = () =>{
+        // c(`Cart Quantity: ${cartQuantity = cartQuantity + 1}`);
+        if(cartQuantity < 10){
+        cartQuantity = cartQuantity+1;
+        c(`Cart Quantity: ${cartQuantity}`);
+        }else{
+          alert('The cart is full');
+
+        }
+      }
+
+      const increaseByTwo = () =>{
+        if(cartQuantity < 10){
+        c(`Cart Quantity: ${cartQuantity += 2}`);
+        }else{
+          alert('The cart is full');
+        }
+
+      }
+
+      const increaseByThree = () =>{
+        if(cartQuantity < 10){
+        c(`Cart Quantity: ${cartQuantity = cartQuantity + 3}`);
+        }else{
+          alert('The cart is full');
+        }
+
+      }
+
+      const reset =()=>{
+        c(`Cart was reset.\nCart Quantity: ${cartQuantity = 0}`);
+
+      }
+     </script>
+  </body>
+</html>

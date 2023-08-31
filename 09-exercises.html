@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM-Exercises</title>
+  <style>
+    button{
+      padding:5px;
+      font-size: 18px;
+    }
+    p{
+      font-size: 22px;
+    }
+    input{
+      font-size: 18px;
+      padding:6px;
+    }
+    input::placeholder{
+      font-size: 19px;
+    }
+  </style>
+</head>
+<body>
+  <button>9a</button>
+  <button class="js-secondbtn">9b</button>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <button onclick="displayMessage('heads')">heads</button>
+  <button onclick="displayMessage('tails')">tails</button>
+  <br>
+  <br>
+  <p class="js-message"></p>
+  <br>
+  <br>
+  <br>
+  <br>
+  <input type="text" class="js-name-inpt" placeholder="Name" onkeydown="
+  if(event.key === 'Enter'){
+    displayName();
+  }
+  "/>
+  <button onclick="displayName();">Submit</button>
+  <br>
+  <br>
+  <p class="js-name-message"></p>
+  <br>
+  <br>
+  <p>Amazon Shipping Calculator</p>
+  <p>Orders under $40 = +$10 shipping.</p>
+  <p>Orders over $40 = FREE shipping.</p>
+
+
+  <input type="number" class="js-cost" style="padding:3px;border-top-style: solid;" placeholder="cost of order" onkeydown="
+  // console.log(event);
+  if(event.key === 'Enter'){
+    const result = calculateAmount();
+  document.querySelector('.js-result').innerHTML = `$${result/100}`;
+  }"/>
+
+  <button onclick="
+  const result = calculateAmount();
+  document.querySelector('.js-result').innerHTML = `$${result/100}`;
+  console.log(result/100);
+  ">Calculate</button>
+
+  <p class="js-result"></p>
+  <br>
+  <br>
+  <br>
+ 
+  <input type="text" onkeyup="keyPress()" class="js-key-Value" placeholder="Type something"/>
+  <p class="js-keyPressParagraph"></p>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+
+<script>
+  console.log(document.querySelector('button'));
+  document.querySelector('.js-secondbtn')
+  .innerHTML = '9b done!';
+
+  function keyPress(){
+    window.document.querySelector('.js-keyPressParagraph')
+    .innerHTML = window.document.querySelector('.js-key-Value').value;
+  }
+
+  function displayMessage(choseBtn){
+    document.querySelector('.js-message')
+    .innerHTML = `You chose: ${choseBtn}`;
+  }
+
+  function displayName(){
+    const name = document.querySelector('.js-name-inpt').value;
+    document.querySelector('.js-name-message')
+    .innerHTML = `Your name is: ${name}`; 
+  }
+
+  function calculateAmount(){
+     // Convert the numbers to cents by * 100.
+    let cost = +(document.querySelector('.js-cost').value) * 100;
+    if(cost <= 4000){
+      return cost = cost + 1000;
+    }else if(cost > 4000){
+      return cost;
+    }
+  }
+</script>
+</body>
+</html>

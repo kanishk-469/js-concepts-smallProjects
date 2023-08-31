@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Object-Exercises</title>
+</head>
+<body>
+
+
+
+  <script>
+    const product = {
+      name: 'basketball',
+      price: 2035,
+    }
+    console.log(product);
+    product.price += 500;
+    console.log(product);
+
+    product['delivery-time'] = '3 days';
+    console.log(product);
+
+    const product1 ={
+      name : 'socks',
+      price : 299
+    };
+    const product2 ={
+      name : 'gloves',
+      price : 399
+    };
+
+    function compareProduct(product1, product2){
+      const {price} = product1;
+      const {price: price2} = product2;
+
+      if(price < price2){
+        return product1;
+      }else{
+        return product2;
+      }
+    }
+    console.log(compareProduct(product1,product2));
+
+    const product3 ={
+      name : 'socks',
+      price : 299
+    };
+    function isSameProduct(product1,product2){
+      // if(product1.name === product2.name && product1.price === product2.price){
+      //   return true;
+      // }else {
+      //   return false;
+      // }
+     return (product1.name === product2.name && product1.price === product2.price)? true : false;
+    }
+    console.log(isSameProduct(product1,product2));  // false; no both are not same
+    console.log(isSameProduct(product1,product3));  // true; yes both objects are same
+
+    const text = 'Good Morning';
+    console.log(text.toLowerCase()); // auto-boxing(Object) :- string, number and boolean value
+
+    const text2 = 'test'
+    console.log(text2.repeat(7)); // repeat a JS string(text) as many times we want
+
+    
+
+
+
+
+
+  </script>
+</body>
+</html>

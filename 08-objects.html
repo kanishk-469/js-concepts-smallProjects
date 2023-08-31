@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Object-practice</title>
+</head>
+<body>
+  
+  <script>
+   /* const person = {
+      name : 'socks',
+      price: 1900
+    };
+    console.log( typeof person);
+    console.log(person.name);
+    console.log(person.price); // using dot notation 
+
+    person.category = 'cotton shocks';
+    console.log(person);
+    person.name = 'half shocks';
+    console.log(person);
+
+    delete person.name;
+    console.log(person); */
+
+    /*
+    const person2 = {
+      name : 'shirt',
+      // ['delivery-time']: '1-day',
+      'delivery-time': '1-day',
+      rating: { 
+        stars: 4.5,
+        count : 87
+
+      },
+      fun: function function1(){
+        console.log('This function inside Object');
+      }
+    };
+
+    console.log(person2);
+    console.log(person2.name);  // accessing using DOT NOTATION
+    console.log(person2['name']);  // accessing using BRACKET NOTATION
+    console.log(person2['delivery-time']);
+
+    console.log(person2.rating.stars);
+    person2.fun();
+
+    // console built-in object in JS
+    console.log(typeof console);
+    console.log(typeof console.log);
+
+    //JSON built-in Object
+    console.log(JSON.stringify(person2));
+    console.log(JSON.parse(JSON.stringify(person2)));
+
+    //localStorage(use to save values more permanently) built-in object in JS
+    // variables are temporary storage
+    // we can save the scores in local storage of browsers.
+    */
+
+    // JS has special feature auto-boxing, which converts string to special object automatically, that's why it has property and methods,shown below.
+    console.log('hello'.length); // string has length property
+    console.log('hello'.toUpperCase()); // string also have method 
+    console.log(3.5.toString());
+    console.log(true.toString());
+
+    // auto-boxing wouldn't work
+    /*console.log(null.length);
+    console.log(undefined.method());*/
+
+    /* OBJECTS are References and let's learn some object behaviours */
+    const object1 ={
+      message: 'Hello'
+    };
+    const object2 = object1;
+    object1.message = 'Good Job!';
+    console.log(object1);
+    console.log(object2);
+
+    const object3 = {
+      message:'Good Job!'
+    }
+
+    console.log(object1 === object3); // false
+    console.log(object1 === object2);  // true; references are same 
+
+    const object4 = {
+      message:'Good Job!',
+      price: 1899
+    };
+    // const message = object4.meassage;
+    const {message,price} = object4; // object destructuring 
+    console.log(message);
+    console.log(price);
+
+    const object5 ={
+      // message : message
+      message,                 // shorthand property 
+      // method: function funtion1(){
+      //   console.log('method');
+      // }
+      method() {                 // shorthand method syntax
+        console.log('method');
+      }
+    };
+    console.log(object5);
+    object5.method();
+
+
+
+
+  </script>
+</body>
+</html>
